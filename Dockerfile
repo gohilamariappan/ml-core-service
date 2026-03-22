@@ -1,5 +1,4 @@
-FROM node:18
-
+FROM node:18-bullseye
 # Create a non-root user
 RUN useradd -m appuser
 
