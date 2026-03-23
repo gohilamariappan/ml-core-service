@@ -1,6 +1,7 @@
 FROM node:20-alpine
- # Create a non-root user
-RUN useradd -m appuser
+
+# Create non-root user (Alpine uses adduser, not useradd)
+RUN adduser -D -h /home/appuser appuser
 
 # Create application directory & set permissions
 WORKDIR /opt/core
